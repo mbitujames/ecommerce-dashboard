@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Analytics | Real-Time E-Commerce Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Nexus</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="#"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="#"><i class="fas fa-tags"></i> Promotions</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                </div>
+                <div class="user-info">
+                    <span class="name">Sarah Johnson</span>
+                    <span class="role">Admin</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1>Dashboard</h1>
+                    <div class="date-time">
+                        <span id="current-date"></span>
+                        <span id="current-time"></span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Key Metrics Cards -->
+            <section class="metrics-grid">
+                <div class="metric-card sales">
+                    <div class="metric-info">
+                        <h3>Total Sales</h3>
+                        <h2>$24,580</h2>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5% from last week</span>
+                        </div>
+                    </div>
+                    <div class="metric-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+
+                <div class="metric-card orders">
+                    <div class="metric-info">
+                        <h3>Total Orders</h3>
+                        <h2>1,248</h2>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8.3% from last week</span>
+                        </div>
+                    </div>
+                    <div class="metric-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+
+                <div class="metric-card customers">
+                    <div class="metric-info">
+                        <h3>New Customers</h3>
+                        <h2>342</h2>
+                        <div class="trend down">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>3.2% from last week</span>
+                        </div>
+                    </div>
+                    <div class="metric-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                </div>
+
+                <div class="metric-card conversion">
+                    <div class="metric-info">
+                        <h3>Conversion Rate</h3>
+                        <h2>3.42%</h2>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>1.1% from last week</span>
+                        </div>
+                    </div>
+                    <div class="metric-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="main-chart">
+                    <div class="chart-header">
+                        <h3>Sales Performance</h3>
+                        <div class="time-filters">
+                            <button class="active">Day</button>
+                            <button>Week</button>
+                            <button>Month</button>
+                            <button>Year</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+                <div class="secondary-charts">
+                    <div class="small-chart">
+                        <h3>Revenue by Category</h3>
+                        <div class="chart-container">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="small-chart">
+                        <h3>Traffic Sources</h3>
+                        <div class="chart-container">
+                            <canvas id="trafficChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Orders and Top Products -->
+            <section class="data-tables">
+                <div class="recent-orders">
+                    <div class="table-header">
+                        <h3>Recent Orders</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table-body">
+                            <!-- Orders will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="top-products">
+                    <div class="table-header">
+                        <h3>Top Selling Products</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="products-grid" id="products-grid">
+                        <!-- Products will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Real-Time Activity Feed -->
+            <section class="activity-feed">
+                <h3>Real-Time Activity</h3>
+                <div class="feed-container" id="activity-feed">
+                    <!-- Activities will be populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
