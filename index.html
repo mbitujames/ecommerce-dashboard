@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mbitu Analytics | Real-Time E-Commerce Dashboard</title>
+    <title>Dashboard | Tembu Collections</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="dashboard-container">
@@ -18,17 +18,17 @@
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li class="active"><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
-                    <li><a href="#"><i class="fas fa-box-open"></i> Products</a></li>
-                    <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
-                    <li><a href="#"><i class="fas fa-tags"></i> Promotions</a></li>
-                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li class="active"><a href="index.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="promotions.html"><i class="fas fa-tags"></i> Promotions</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
                 </ul>
             </nav>
             <div class="user-profile">
                 <div class="avatar">
-                    <img src="./asstets/mbitu.png" alt="User">
+                    <img src="asstets/mbitu.png" alt="User">
                 </div>
                 <div class="user-info">
                     <span class="name">Mbitu James</span>
@@ -155,7 +155,7 @@
                 <div class="recent-orders">
                     <div class="table-header">
                         <h3>Recent Orders</h3>
-                        <a href="#" class="view-all">View All</a>
+                        <a href="orders.html" class="view-all">View All</a>
                     </div>
                     <table>
                         <thead>
@@ -177,7 +177,7 @@
                 <div class="top-products">
                     <div class="table-header">
                         <h3>Top Selling Products</h3>
-                        <a href="#" class="view-all">View All</a>
+                        <a href="products.html" class="view-all">View All</a>
                     </div>
                     <div class="products-grid" id="products-grid">
                         <!-- Products will be populated by JavaScript -->
@@ -196,6 +196,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

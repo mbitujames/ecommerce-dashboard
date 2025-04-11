@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Tembu Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (same as index.html) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Tembu Collections</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="promotions.html"><i class="fas fa-tags"></i> Promotions</a></li>
+                    <li class="active"><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="asstets/mbitu.png" alt="User">
+                </div>
+                <div class="user-info">
+                    <span class="name">Mbitu James</span>
+                    <span class="role">Admin</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Settings Content -->
+        <main class="main-content">
+            <div class="section-header">
+                <h2><i class="fas fa-cog"></i> Store Settings</h2>
+            </div>
+            
+            <div class="settings-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="general">General</button>
+                    <button class="tab-btn" data-tab="payment">Payment</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping</button>
+                    <button class="tab-btn" data-tab="tax">Tax</button>
+                    <button class="tab-btn" data-tab="notifications">Notifications</button>
+                </div>
+                
+                <div class="tab-content active" id="general-tab">
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>Store Name</label>
+                            <input type="text" value="Tembu Collections">
+                        </div>
+                        <div class="form-group">
+                            <label>Store Email</label>
+                            <input type="email" value="contact@tembucollections.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Store Currency</label>
+                            <select>
+                                <option>US Dollar (USD)</option>
+                                <option selected>Kenyan Shilling (KES)</option>
+                                <option>Euro (EUR)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Timezone</label>
+                            <select>
+                                <option selected>Africa/Nairobi (GMT+3)</option>
+                                <option>UTC</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Store Logo</label>
+                            <div class="file-upload">
+                                <img src="assets/logo.png" alt="Store Logo" class="logo-preview">
+                                <input type="file" id="logo-upload" accept="image/*">
+                                <label for="logo-upload" class="btn btn-upload">Change Logo</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-save">Save Changes</button>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="payment-tab">
+                    <h3>Payment Methods</h3>
+                    <div class="payment-methods">
+                        <div class="method-card">
+                            <div class="method-header">
+                                <img src="https://via.placeholder.com/80x30?text=M-Pesa" alt="M-Pesa">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="method-details">
+                                <p>Mobile money payment method for Kenya</p>
+                                <button class="btn btn-configure">Configure</button>
+                            </div>
+                        </div>
+                        
+                        <div class="method-card">
+                            <div class="method-header">
+                                <img src="https://via.placeholder.com/80x30?text=Visa" alt="Visa">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="method-details">
+                                <p>Credit card payments via Stripe</p>
+                                <button class="btn btn-configure">Configure</button>
+                            </div>
+                        </div>
+                        
+                        <div class="method-card">
+                            <div class="method-header">
+                                <img src="https://via.placeholder.com/80x30?text=PayPal" alt="PayPal">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="method-details">
+                                <p>PayPal payments for international customers</p>
+                                <button class="btn btn-configure">Configure</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other tabs would be implemented similarly -->
+                <div class="tab-content" id="shipping-tab">
+                    <h3>Shipping Settings</h3>
+                    <p>Configure your shipping methods and rates here.</p>
+                </div>
+                
+                <div class="tab-content" id="tax-tab">
+                    <h3>Tax Settings</h3>
+                    <p>Configure your tax rates and rules here.</p>
+                </div>
+                
+                <div class="tab-content" id="notifications-tab">
+                    <h3>Notification Settings</h3>
+                    <p>Configure which notifications you receive and how.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

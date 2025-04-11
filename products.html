@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Tembu Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (same as index.html) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Tembu Collections</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li class="active"><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="promotions.html"><i class="fas fa-tags"></i> Promotions</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="asstets/mbitu.png" alt="User">
+                </div>
+                <div class="user-info">
+                    <span class="name">Mbitu James</span>
+                    <span class="role">Admin</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Products Content -->
+        <main class="main-content">
+            <div class="section-header">
+                <h2><i class="fas fa-box-open"></i> Product Catalog</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Add Product</button>
+                    <button class="btn btn-import"><i class="fas fa-file-import"></i> Import</button>
+                </div>
+            </div>
+            
+            <div class="product-view-options">
+                <button class="view-option active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
+                <button class="view-option" data-view="list"><i class="fas fa-list"></i> List</button>
+            </div>
+            
+            <div class="products-grid" id="products-grid-view">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+            
+            <div class="products-list" id="products-list-view" style="display: none;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>SKU</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-list-table">
+                        <!-- Products will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

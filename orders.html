@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders | Tembu Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (same as index.html) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Tembu Collections</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li class="active"><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="promotions.html"><i class="fas fa-tags"></i> Promotions</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="asstets/mbitu.png" alt="User">
+                </div>
+                <div class="user-info">
+                    <span class="name">Mbitu James</span>
+                    <span class="role">Admin</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Orders Content -->
+        <main class="main-content">
+            <div class="section-header">
+                <h2><i class="fas fa-shopping-cart"></i> Orders Management</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Add Order</button>
+                    <button class="btn btn-export"><i class="fas fa-file-export"></i> Export</button>
+                </div>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <select>
+                        <option>All</option>
+                        <option>Pending</option>
+                        <option>Processing</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Date Range:</label>
+                    <input type="date" id="start-date">
+                    <span>to</span>
+                    <input type="date" id="end-date">
+                </div>
+                <div class="filter-group">
+                    <button class="btn btn-apply">Apply Filters</button>
+                    <button class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+            
+            <div class="data-table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-table">
+                        <!-- Orders will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pagination">
+                <button class="btn-prev"><i class="fas fa-chevron-left"></i> Previous</button>
+                <div class="page-numbers">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>10</span>
+                </div>
+                <button class="btn-next">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/orders.js"></script>
+</body>
+</html>

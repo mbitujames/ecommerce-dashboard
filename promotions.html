@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions | Tembu Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation (same as index.html) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Tembu Collections</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                    <li class="active"><a href="promotions.html"><i class="fas fa-tags"></i> Promotions</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="asstets/mbitu.png" alt="User">
+                </div>
+                <div class="user-info">
+                    <span class="name">Mbitu James</span>
+                    <span class="role">Admin</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Promotions Content -->
+        <main class="main-content">
+            <div class="section-header">
+                <h2><i class="fas fa-tags"></i> Promotions & Discounts</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Create Promotion</button>
+                </div>
+            </div>
+            
+            <div class="promotion-cards">
+                <div class="promotion-card active">
+                    <div class="promotion-header">
+                        <h3>Summer Sale</h3>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <div class="promotion-details">
+                        <p><strong>Discount:</strong> 20% off all items</p>
+                        <p><strong>Valid:</strong> Jun 1 - Aug 31, 2023</p>
+                        <p><strong>Usage:</strong> 342/500 redemptions</p>
+                    </div>
+                    <div class="promotion-actions">
+                        <button class="btn btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                        <button class="btn btn-deactivate"><i class="fas fa-pause"></i> Pause</button>
+                    </div>
+                </div>
+                
+                <div class="promotion-card scheduled">
+                    <div class="promotion-header">
+                        <h3>Back to School</h3>
+                        <span class="status-badge scheduled">Scheduled</span>
+                    </div>
+                    <div class="promotion-details">
+                        <p><strong>Discount:</strong> 15% off school supplies</p>
+                        <p><strong>Starts:</strong> Aug 15, 2023</p>
+                        <p><strong>Ends:</strong> Sep 15, 2023</p>
+                    </div>
+                    <div class="promotion-actions">
+                        <button class="btn btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                        <button class="btn btn-cancel"><i class="fas fa-times"></i> Cancel</button>
+                    </div>
+                </div>
+                
+                <div class="promotion-card expired">
+                    <div class="promotion-header">
+                        <h3>Spring Clearance</h3>
+                        <span class="status-badge expired">Expired</span>
+                    </div>
+                    <div class="promotion-details">
+                        <p><strong>Discount:</strong> Up to 50% off</p>
+                        <p><strong>Ran:</strong> Mar 1 - May 31, 2023</p>
+                        <p><strong>Usage:</strong> 892 redemptions</p>
+                    </div>
+                    <div class="promotion-actions">
+                        <button class="btn btn-clone"><i class="fas fa-copy"></i> Clone</button>
+                        <button class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-load-more">Load More Promotions</button>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/promotions.js"></script>
+</body>
+</html>
